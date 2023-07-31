@@ -16,7 +16,7 @@ const CaesarCipher = () => {
     return (
         <>
 
-            <h1>Caesar Cipher</h1>
+            <h1>This is Caesar Cipher</h1>
 
             <label htmlFor="shift-input">Shift</label>
             <input
