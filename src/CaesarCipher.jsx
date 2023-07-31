@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import caesarCipher from './helpers/caesar_cipher';
+import encryptCipher from './helpers/caesar_cipher';
 
 const CaesarCipher = () => {
 
     const [plainText, setPlainText] = useState('');
-    const [cipherText, setCipher] = useState('');
+    const [cipherText, setCipherText] = useState('');
     const [shift, setShift] = useState(1);
+    const [shiftError, setShiftError] = useState('');
 
     useEffect(() => {
-        const cipher = caesarCipher(plainText, Number(shift));
-        setCipher(cipher);
+        const cipher = encryptCipher(plainText, Number(shift));
+        setCipherText(cipher);
     }, [plainText, shift]);
 
     return (

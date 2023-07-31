@@ -1,4 +1,4 @@
-function caesarCipher(text, shift) {
+function encryptCipher(text, shift) {
 
     return text.trim().split('').map((char) => {
 
@@ -34,4 +34,4 @@ function caesarCipher(text, shift) {
     
 }
 
-export default caesarCipher;
+export default encryptCipher;
