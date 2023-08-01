@@ -1,6 +1,6 @@
 import isValidNumberSequence from './is_valid_number_sequence';
 
-function encryptCipher(text, shiftSequence) {
+function encryptCaesarAdvanced(text, shiftSequence) {
 
     const sequence = isValidNumberSequence(shiftSequence);
     if (!sequence) {
@@ -20,7 +20,6 @@ function encryptCipher(text, shiftSequence) {
 
         const charCode = char.charCodeAt(0);
         let shiftedCharCode;
-    
 
         // for uppercase letters
         if (charCode >= 65 && charCode <= 90) {
@@ -47,6 +46,7 @@ function encryptCipher(text, shiftSequence) {
             : shiftedCharCode = ((charCode - 57 + shift) % 10) + 57;
         }
         else {
+            index --;
             return char;
         }
         console.log(" shifted by " + shift + " characters." + " charCode: " + charCode + " shiftedCharCode: " + shiftedCharCode);
@@ -56,4 +56,4 @@ function encryptCipher(text, shiftSequence) {
     
 }
 
-export default encryptCipher;
+export default encryptCaesarAdvanced;

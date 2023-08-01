@@ -1,6 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
+import Home from './Home';
 import CaesarCipher from './CaesarCipher';
-import CaesarCipherAdvanced from './CaesarCipherAdvanced';
+import Enigma from './Enigma';
+import Bombe from './Bombe';
 
 function App() {
 
@@ -8,10 +10,16 @@ function App() {
 
         <Routes>
             <Route path="/"
+                element={<Home />}
+            />
+            <Route path="/caesar-cipher"
                 element={<CaesarCipher />}
             />
-            <Route path="/caesar-cipher-advanced"
-                element={<CaesarCipherAdvanced />}
+            <Route path="/enigma-machine"
+                element={<Enigma />}
+            />
+            <Route path="/bombe-machine"
+                element={<Bombe />}
             />
         </Routes>
 
